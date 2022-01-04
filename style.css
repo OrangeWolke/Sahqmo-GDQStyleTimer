@@ -123,6 +123,10 @@ input {
   left: 250px;
 }
 
+#refresh {
+  left: 430px;
+}
+
 input:hover {
   background-color: #4d0c2f;
 }
