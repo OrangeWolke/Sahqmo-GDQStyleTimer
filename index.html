@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Sahqmo Timer</title>
+</head>
+<body>
+    <div id="container">
+        <table id="timer">
+            <tr>
+                <td id="hour">0</td>
+                <td class="seperator">:</td>
+                <td id="minute">00</td>
+                <td class="seperator">:</td>
+                <td id="second">00</td>
+                <td class="mini-seperator">.</td>
+                <td id="milisecond">0</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="gt-container">
+        <table id="gt-timer">
+            <tr id="gt-1-line">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr id="gt-2-line">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr id="gt-3-line">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr id="gt-4-line">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+    <input id="timer-start" type="button" value="Start" onClick="Start()" />
+    <input id="timer-stop" type="button" value="Stop" onClick="Stop()" />
+
+    <script src="timer.js"></script>
+
+</body>
+</html>

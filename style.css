@@ -1,0 +1,133 @@
+body {
+  background: #0f0;
+  font-family: 'Inconsolata', monospace;
+}
+
+#container {
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#timer {
+  position: relative;
+  left: 8px;
+  bottom: 5px;
+  margin: 180px;
+  padding: 0 16px 10px 30px;
+  border: 10px solid #741147;
+  border-radius: 24px;
+  background-color: rgba(52, 4, 30, 0.5);
+  text-shadow: white 1px 0 10px;
+}
+
+#hour, #minute, #second {
+  padding: 0 7px;
+  background: rgba(0, 0, 0, 0);
+  border-radius: 24px;
+  color: white;
+  font-size: 12rem;
+}
+
+#milisecond {
+  position: relative;
+  top: 20px;
+  right: 20px;
+  padding: 0 6px;
+  background: rgba(0, 0, 0, 0);
+  border-radius: 24px;
+  color: white;
+  font-size: 7rem;
+}
+
+.seperator, .mini-seperator {
+  position: relative;
+  bottom: 10px;
+  background: rgba(0, 0, 0, 0);
+  border-radius: 24px;
+  color: white;
+  font-size: 8rem;
+  vertical-align: middle;
+}
+
+.mini-seperator {
+  position: relative;
+  top: 20px;
+  right: 14px;
+  background: rgba(0, 0, 0, 0);
+  border-radius: 24px;
+  color: white;
+  font-size: 6rem;
+  vertical-align: middle;
+}
+
+#gt-container {
+  position: relative;
+  bottom: 514px;
+}
+
+#gt-timer {
+  z-index: -2;
+  position: relative;
+  left: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 100px;
+  color: white;
+}
+
+#gt-timer td {
+  padding: 27px 69px;
+  background-color: #33041e;
+}
+
+input {
+  font-family: 'Inconsolata', monospace;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  padding: 20px 40px;
+  margin: 0 10px;
+  background-color: #000000;
+  color: white;
+  border: 0;
+  border-radius: 24px;
+  font-size: 2rem;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+#timer-stop {
+  left: 250px;
+}
+
+input:hover {
+  background-color: #4d0c2f;
+}
+
+input:active {
+  background-color: #871250;
+}
+/*# sourceMappingURL=style.css.map */
