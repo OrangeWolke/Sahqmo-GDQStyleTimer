@@ -5,12 +5,17 @@ var hourText = document.getElementById('hour'),
 
 var gtContainer = document.getElementById('gt-timer'),
     block = gtContainer.querySelectorAll('td')
+ 
+var timerContainer = document.getElementById('timer'),
+    startLight = document.getElementById('start-light');
 
 var timer;
-var stopRanLight;
+var startLighting;
+var finishLighting;
 var stopRandom;
 
 var hasStopped = false;
+var startAnimPlay = false;
 var finishAnimPlay = false;
 
 // 2진법 스트링 변환
@@ -31,9 +36,17 @@ function gtDisplay(bi_nums, subArrayNum) {
 }
 
 // 타이머 정지시 잠깐 밝은 빛
-function gtRanDisStartLight() {
-    var timerContainer = document.getElementById('timer');
+function gtStartLight() {
+    if (!startAnimPlay) {
+        startLight.style.backgroundColor = "rgba(255, 255, 255, 1)";
+    } else {
+        startLight.style.backgroundColor = "rgba(52, 4, 30, 0)";
+        startLight.style.transitionDuration = "0.6s";
+    }
+    startAnimPlay = true;
+}
 
+function gtFinishLight() {
     if (!finishAnimPlay) {
         timerContainer.style.backgroundColor = "rgba(255, 255, 255, .75)";
     } else {
@@ -45,7 +58,6 @@ function gtRanDisStartLight() {
 
 // 타이머 정지 시 랜덤 패널 점등 구현
 function gtRandomDisplay() {
-
     for (var i = 0; i < block.length; i++) {
         block[i].style.backgroundColor = "#33041e";
         block[i].style.transitionDuration = "0.35s";
@@ -63,7 +75,6 @@ function gtRandomDisplay() {
         }
         block[j].style.transitionDuration = "0.35s";
     }
-    
 }
 
 // 0.1초 간격 갱신
@@ -102,14 +113,22 @@ function TimerDisplay() {
     }
 }
 
+var startBtn = document.getElementById('timer-start'),
+    stopBtn = document.getElementById('timer-stop');
+
 function Start(){
     hasStopped = false;
+    startLighting = setInterval(gtStartLight, 25);
     timer = setInterval(TimerDisplay, 100);
+    stopBtn.style.display = "block";
+    startBtn.style.display = "none";
 }
 
 function Stop(){
     clearInterval(timer);
     hasStopped = true;
-    stopRanLight = setInterval(gtRanDisStartLight, 25);
+    finishLighting = setInterval(gtFinishLight, 25);
     stopRandom = setInterval(gtRandomDisplay, 250);
+    startBtn.style.display = "none";
+    stopBtn.style.display = "none";
 }

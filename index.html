@@ -11,17 +11,19 @@
 </head>
 <body>
     <div id="container">
-        <table id="timer">
-            <tr>
-                <td id="hour">0</td>
-                <td class="seperator">:</td>
-                <td id="minute">00</td>
-                <td class="seperator">:</td>
-                <td id="second">00</td>
-                <td class="mini-seperator">.</td>
-                <td id="milisecond">0</td>
-            </tr>
-        </table>
+        <div id="start-light">
+            <table id="timer">
+                <tr>
+                    <td id="hour">0</td>
+                    <td class="seperator">:</td>
+                    <td id="minute">00</td>
+                    <td class="seperator">:</td>
+                    <td id="second">00</td>
+                    <td class="mini-seperator">.</td>
+                    <td id="milisecond">0</td>
+                </tr>
+            </table>
+        </div>
     </div>
 
     <div id="gt-container">
@@ -61,10 +63,8 @@
         </table>
     </div>
 
-    <input id="timer-start" type="button" value="Start" onClick="Start()" />
-    <input id="timer-stop" type="button" value="Stop" onClick="Stop()" />
-    
-    <input id="refresh" type="button" value="Refresh" onClick="window.location.reload();" />
+    <input id="timer-start" type="button" onClick="Start()" />
+    <input id="timer-stop" type="button" onClick="Stop()" />
 
     <script src="timer.js"></script>
 
